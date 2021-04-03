@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="494.0" style="-fx-background-color: #C3D9F5;" stylesheets="@../assets/AppMain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.afpa.controller.DashbordAdminController">
+   <children>
+      <Label layoutX="116.0" text="Rechercher un Client">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutY="67.0" prefHeight="28.0" prefWidth="479.0" styleClass="labelInfo" text=" Veuillez entrer nom, Le Numéro de compte et l'identifant du client ">
+         <font>
+            <Font name="Segoe UI Bold Italic" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0000004a" />
+         </effect>
+      </Label>
+      <TableView fx:id="listClient" onMouseClicked="#detailClient" layoutX="33.0" layoutY="179.0" prefHeight="168.0" prefWidth="430.0">
+        <columns>
+            <TableColumn fx:id="idClient" prefWidth="122.0" text="Identifaint" />
+          <TableColumn fx:id="nomClient" prefWidth="125.0" text="Nom" />
+          <TableColumn fx:id="prenomClient" prefWidth="182.0" text="Prenom" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchTextFieldClient" layoutX="32.0" layoutY="140.0" prefHeight="25.0" prefWidth="430.0" />
+      <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="435.0" layoutY="144.0">
+         <image>
+            <Image url="@../assets/image/search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

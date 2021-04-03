@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="574.0" minWidth="1370.0" prefHeight="574.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.afpa.controller.DashbordConseillerController">
+   <children>
+      <ImageView fitHeight="574.0" fitWidth="1370.0" opacity="0.82">
+         <image>
+            <Image url="@../assets/image/Plan%20de%20travail%201.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="200.0" layoutY="106.0" prefHeight="470.0" prefWidth="1035.0" styleClass="form" stylesheets="@../assets/AppMain.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <AnchorPane layoutX="561.0" layoutY="103.0" prefHeight="338.0" prefWidth="434.0" style="-fx-background-color: #D5E9FF; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <effect>
+                  <DropShadow color="#00000082" />
+               </effect>
+               <children>
+                  <Label layoutX="2.0" layoutY="14.0" prefHeight="33.0" prefWidth="234.0" text="Liste des Comptes">
+                     <font>
+                        <Font name="Segoe UI Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addCompte" layoutX="14.0" layoutY="268.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="407.0" style="-fx-background-color: #D5E9FF;" styleClass="btnStyle" text="Ajouter">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#00000066" />
+                     </effect>
+                  </Button>
+                  <TableView fx:id="listCompte" layoutX="6.0" layoutY="92.0" onMouseClicked="#detailCompte" prefHeight="168.0" prefWidth="430.0">
+                     <columns>
+                        <TableColumn fx:id="numCompte" prefWidth="122.0" text="Numero Compte" />
+                        <TableColumn fx:id="typeCompte" prefWidth="125.0" text="Type Compte" />
+                        <TableColumn fx:id="soldeCompte" prefWidth="182.0" text="Solde" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="searchTextFieldCompte" layoutX="6.0" layoutY="58.0" prefHeight="25.0" prefWidth="422.0" />
+                  <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="398.0" layoutY="62.0">
+                     <image>
+                        <Image url="@../assets/image/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="56.0" layoutY="103.0" prefHeight="338.0" prefWidth="434.0" style="-fx-background-color: #D5E9FF; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <effect>
+                  <DropShadow color="#00000082" />
+               </effect>
+               <children>
+                  <Label layoutX="8.0" layoutY="14.0" text="Liste des Clients">
+                     <font>
+                        <Font name="Segoe UI Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addClient" layoutX="13.0" layoutY="268.0" mnemonicParsing="false" onAction="#ajouterClient" prefHeight="56.0" prefWidth="400.0" style="-fx-background-color: #D5E9FF;" styleClass="btnStyle" text="Ajouter">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#00000066" />
+                     </effect>
+                  </Button>
+                  <TableView fx:id="listClient" layoutX="5.0" layoutY="80.0" onMouseClicked="#detailClient" prefHeight="167.0" prefWidth="430.0">
+                     <columns>
+                        <TableColumn fx:id="idClient" prefWidth="122.0" text="id" />
+                        <TableColumn fx:id="nomClient" prefWidth="125.0" text="Nom" />
+                        <TableColumn fx:id="prenomClient" prefWidth="182.0" text="Prenom" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="searchTextFieldClient" layoutX="10.0" layoutY="47.0" prefHeight="25.0" prefWidth="407.0" />
+                  <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="394.0" layoutY="51.0">
+                     <image>
+                        <Image url="@../assets/image/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="200.0" layoutY="30.0" text="Dashbord Conseiller">
+         <font>
+            <Font name="Segoe UI Bold" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="logout" layoutX="1301.0" layoutY="24.0" mnemonicParsing="false" onAction="#deconnecter" prefHeight="26.0" prefWidth="15.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="49.0">
+               <image>
+                  <Image url="@../assets/image/logout.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000051" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="user" layoutX="1249.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="52.0">
+               <image>
+                  <Image url="@../assets/image/user.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000058" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

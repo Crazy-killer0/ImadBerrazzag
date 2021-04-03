@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="574.0" minWidth="1370.0" prefHeight="574.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.afpa.controller.InfoClientController">
+   <children>
+      <ImageView fitHeight="574.0" fitWidth="1370.0" opacity="0.82">
+         <image>
+            <Image url="@../assets/image/Plan%20de%20travail%201.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="200.0" layoutY="106.0" prefHeight="467.0" prefWidth="1035.0" styleClass="form" stylesheets="@../assets/AppMain.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <AnchorPane layoutX="56.0" layoutY="103.0" prefHeight="366.0" prefWidth="905.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <effect>
+                  <DropShadow color="#00000082" />
+               </effect>
+               <children>
+                  <TableView fx:id="listCompte" layoutX="100.0" layoutY="165.0" prefHeight="201.0" prefWidth="705.0">
+                    <columns>
+                      <TableColumn fx:id="typeCompte" minWidth="0.0" prefWidth="200.0" text="Type de compte" />
+                      <TableColumn fx:id="nbCompte" prefWidth="175.0" text="Numéro de compte" />
+                        <TableColumn fx:id="solde" prefWidth="150.0" text="Solde" />
+                        <TableColumn fx:id="lastOperation" prefWidth="173.0" text="Dernière opération" />
+                    </columns>
+                  </TableView>
+                  <Text layoutX="36.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro client :" textAlignment="CENTER">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prenom :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="36.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date de naissance :" wrappingWidth="156.3671875">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutX="202.0" layoutY="23.0" prefHeight="81.0" prefWidth="163.0">
+                     <children>
+                        <Label fx:id="numeroClient" prefHeight="17.0" prefWidth="133.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nom" prefHeight="17.0" prefWidth="133.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="prenom" prefHeight="17.0" prefWidth="133.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="dateDeNaissance" prefHeight="38.0" prefWidth="133.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fx:id="imageQR" fitHeight="108.0" fitWidth="114.0" layoutX="748.0" layoutY="23.0">
+                     <image>
+                        <Image url="@../../../../qrcode.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="110.0" layoutY="40.0" text="Info Client">
+               <font>
+                  <Font name="Segoe UI Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="200.0" layoutY="30.0" text="Dashbord Conseiller">
+         <font>
+            <Font name="Segoe UI Bold" size="50.0" />
+         </font>
+      </Label>
+      <Button fx:id="impression" accessibleRole="IMAGE_VIEW" layoutX="1261.0" layoutY="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="48.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="44.0">
+               <image>
+                  <Image url="@../assets/image/print.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="359.0" prefWidth="437.0" style="-fx-background-radius: 0;" styleClass="form" stylesheets="@../assets/AppMain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutY="58.0" styleClass="labelInfo" text=" Veuillez renseigner le montant ">
+         <font>
+            <Font name="Segoe UI Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="montant" layoutX="50.0" layoutY="172.0" onAction="#operation" prefHeight="60.0" prefWidth="337.0" style="-fx-background-radius: 10; -fx-border-color: 10;">
+         <font>
+            <Font size="27.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00000066" radius="6.2925" width="6.17" />
+         </effect>
+      </TextField>
+      <Button fx:id="valider" layoutX="67.0" layoutY="269.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="289.0" styleClass="btnGreen" text="Valider" textFill="#3fcd43">
+         <font>
+            <Font name="Segoe UI Bold" size="25.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#00000066" />
+         </effect>
+      </Button>
+      <Label layoutX="74.0" layoutY="129.0" text="Montant operation">
+         <font>
+            <Font name="Segoe UI Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

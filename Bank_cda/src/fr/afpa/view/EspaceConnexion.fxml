@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="574.0" maxWidth="1370.0" minHeight="574.0" minWidth="1370.0" prefHeight="574.0" prefWidth="1370.0" stylesheets="@../assets/AppMain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.afpa.controller.ConnexionController">
+   <children>
+      <ImageView fitHeight="591.0" fitWidth="1424.0" opacity="0.9">
+         <image>
+            <Image url="@../assets/image/Plan%20de%20travail%201.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="405.0" layoutY="50.0" prefHeight="541.0" prefWidth="663.0" style="-fx-background-radius: 18 18 0 0; -fx-border-radius: 18 18 00;" styleClass="form">
+         <children>
+            <Label layoutX="167.0" layoutY="15.0" text="Espace Connexion">
+               <font>
+                  <Font name="Segoe UI Bold" size="40.0" />
+               </font>
+            </Label>
+            <TextField fx:id="login" layoutX="242.0" layoutY="171.0" prefHeight="34.0" prefWidth="380.0" styleClass="champForm">
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="8.96" radius="4.025" width="9.14" />
+               </effect>
+            </TextField>
+            <Label layoutX="62.0" layoutY="172.0" text="Login">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="62.0" layoutY="280.0" text="Mot de passe">
+               <font>
+                  <Font name="Segoe UI" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="-9.0" layoutY="88.0" prefHeight="23.0" prefWidth="483.0" styleClass="labelInfo" text="  Veuillez entrer votre login et votre mot de passe">
+               <font>
+                  <Font name="Segoe UI Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="connexion" contentDisplay="RIGHT" layoutX="200.0" layoutY="406.0" mnemonicParsing="false" onAction="#authentification" prefHeight="79.0" prefWidth="317.0" styleClass="btnGreen" text="Se connecter" textFill="#3fcd43">
+               <font>
+                  <Font name="Segoe UI Bold" size="34.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#00000057" />
+               </effect>
+            </Button>
+            <PasswordField fx:id="password" layoutX="242.0" layoutY="279.0" prefHeight="34.0" prefWidth="380.0" styleClass="champForm">
+               <effect>
+                  <DropShadow height="9.05" radius="4.0475" width="9.14" />
+               </effect>
+            </PasswordField>
+            <Label fx:id="erreurLogin" layoutX="302.0" layoutY="323.0" prefHeight="23.0" prefWidth="261.0" text="Mot de passe ou Login invalide " textFill="#e40000" visible="false">
+               <font>
+                  <Font name="Segoe UI Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

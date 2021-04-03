@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="574.0" minWidth="1370.0" prefHeight="574.0" prefWidth="1345.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.afpa.controller.DashbordAdminController">
+   <children>
+      <ImageView fitHeight="574.0" fitWidth="1389.0" layoutX="-14.0" opacity="0.9">
+         <image>
+            <Image url="@../assets/image/Plan%20de%20travail%201.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="201.0" layoutY="95.0" prefHeight="480.0" prefWidth="1035.0" styleClass="form" stylesheets="@../assets/AppMain.css">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Button fx:id="searchCompte" onAction="#rechercherCompte" layoutX="619.0" layoutY="352.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="321.0" style="-fx-background-color: #D5E9FF; -fx-background-radius: 25;" text="Rechercher Compte">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000006c" />
+               </effect></Button>
+            <AnchorPane layoutX="81.0" layoutY="72.0" prefHeight="256.0" prefWidth="434.0" style="-fx-background-color: #D5E9FF; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <effect>
+                  <DropShadow color="#00000082" />
+               </effect>
+               <children>
+                  <Label layoutX="7.0" layoutY="14.0" text="Liste des Agences">
+                     <font>
+                        <Font name="Segoe UI Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addAgence" layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#ajouterAgence" prefHeight="56.0" prefWidth="395.0" style="-fx-background-color: #D5E9FF;" styleClass="btnStyle" text="Ajouter">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#00000066" />
+                     </effect>
+                  </Button>
+                  <TableView fx:id="listAgence" onMouseClicked="#modifAgence" layoutX="5.0" layoutY="57.0" prefHeight="126.0" prefWidth="424.0">
+                    <columns>
+                      <TableColumn fx:id="codeAgence" prefWidth="204.0" text="Code Agence" />
+                      <TableColumn fx:id="nomAgence" prefWidth="219.0" text="Libelle" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="searchTextField" layoutX="242.0" layoutY="18.0" prefHeight="25.0" prefWidth="187.0" />
+                  <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="412.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../assets/image/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Button fx:id="searchClient" onAction="#rechercherClient" layoutX="130.0" layoutY="342.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="348.0" style="-fx-background-color: #D5E9FF; -fx-background-radius: 25;" text="Rechercher Client">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#00000096" />
+               </effect>
+            </Button>
+            <Button fx:id="addClient" onAction="#ajouterClient" layoutX="130.0" layoutY="398.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="348.0" style="-fx-background-color: #D5E9FF; -fx-background-radius: 25;" text="Ajouter Client">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000006d" />
+               </effect>
+            </Button>
+            <AnchorPane layoutX="555.0" layoutY="72.0" prefHeight="256.0" prefWidth="454.0" style="-fx-background-color: #D5E9FF; -fx-background-radius: 20; -fx-border-radius: 20;">
+               <effect>
+                  <DropShadow color="#00000082" />
+               </effect>
+               <children>
+                  <Label layoutX="7.0" layoutY="14.0" text="Liste des Conseiller">
+                     <font>
+                        <Font name="Segoe UI Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addConseiller" layoutX="14.0" layoutY="192.0" mnemonicParsing="false" onAction="#ajouterConseiller" prefHeight="56.0" prefWidth="424.0" style="-fx-background-color: #D5E9FF;" styleClass="btnStyle" text="Ajouter">
+                     <font>
+                        <Font name="Segoe UI Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow color="#00000066" />
+                     </effect>
+                  </Button>
+                  <TableView fx:id="listConseiller" onMouseClicked="#modifConseiller" layoutX="5.0" layoutY="55.0" prefHeight="126.0" prefWidth="440.0">
+                     <columns>
+                        <TableColumn fx:id="idConseiller" prefWidth="76.0" text="Id" />
+                        <TableColumn fx:id="nomConseiller" prefWidth="78.0" text="Nom" />
+                        <TableColumn fx:id="prenomConseiller" prefWidth="132.0" text="Prenom" />
+                        <TableColumn fx:id="mailConseiller" prefWidth="137.0" text="Adresse Mail" />
+                     </columns>
+                  </TableView>
+                  <TextField fx:id="searchTextFieldConseiller" layoutX="260.0" layoutY="18.0" prefHeight="25.0" prefWidth="187.0" />
+                  <ImageView fitHeight="18.0" fitWidth="17.0" layoutX="430.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../assets/image/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="214.0" layoutY="28.0" text="Dashbord Admin">
+         <font>
+            <Font name="Segoe UI Bold" size="56.0" />
+         </font>
+      </Label>
+      <Button fx:id="logout" layoutX="1291.0" layoutY="14.0" mnemonicParsing="false" onAction="#deconnecter" prefHeight="26.0" prefWidth="15.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="49.0">
+               <image>
+                  <Image url="@../assets/image/logout.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000051" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="user" layoutX="1236.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="52.0">
+               <image>
+                  <Image url="@../assets/image/user.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000058" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefWidth="252.0">
+         <children>
+            <ImageView fitHeight="574.0" fitWidth="1370.0" opacity="0.9">
+               <image>
+                  <Image url="@../assets/image/Plan%20de%20travail%201.png" />
+               </image>
+            </ImageView>
+            <Label graphicTextGap="10.0" layoutX="327.0" layoutY="33.0" text="Creation Type de compte">
+               <font>
+                  <Font name="Segoe UI Bold" size="56.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="299.0" layoutY="100.0" prefHeight="473.0" prefWidth="949.0" styleClass="form" stylesheets="@../assets/AppMain.css">
+               <children>
+                  <Line endX="678.0" layoutX="253.0" layoutY="49.0" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
+                  <Button layoutX="722.0" layoutY="105.0" mnemonicParsing="false" text="Button">
+                     <effect>
+                        <ImageInput />
+                     </effect>
+                  </Button>
+                  <AnchorPane layoutX="389.0" layoutY="147.0" prefHeight="200.0" prefWidth="200.0" />
+                  <AnchorPane layoutX="133.0" layoutY="105.0" prefHeight="368.0" prefWidth="769.0" style="-fx-border-radius: 40; -fx-background-color: white;" styleClass="champForm">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="64.0" prefHeight="293.0" prefWidth="230.0" style="-fx-border-radius: 40; -fx-background-color: grey; -fx-opacity: 0.10;" styleClass="champForm">
+                           <children>
+                              <Button layoutX="83.0" layoutY="142.0" mnemonicParsing="false" text="Button">
+                                 <effect>
+                                    <ImageInput />
+                                 </effect>
+                              </Button>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="16.0" layoutY="31.0">
+                                 <image>
+                                    <Image url="@../assets/image/20800.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="266.0" layoutY="64.0" prefHeight="293.0" prefWidth="230.0" style="-fx-border-radius: 40; -fx-background-color: grey; -fx-opacity: 0.10;" styleClass="champForm">
+                           <children>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="15.0" layoutY="38.0">
+                                 <image>
+                                    <Image url="@../assets/image/21950.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="518.0" layoutY="64.0" prefHeight="293.0" prefWidth="230.0" style="-fx-border-radius: 40; -fx-background-color: grey; -fx-opacity: 0.10;" styleClass="champForm">
+                           <children>
+                              <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="15.0" layoutY="35.0">
+                                 <image>
+                                    <Image url="@../assets/image/89547-200.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="pel" layoutX="40.0" layoutY="23.0" mnemonicParsing="false" text="PLan épargne logement" />
+                        <Button fx:id="livretA" layoutX="346.0" layoutY="23.0" mnemonicParsing="false" text="Livret A" />
+                        <Button fx:id="compteCourant" layoutX="569.0" layoutY="23.0" mnemonicParsing="false" text="Compte courant" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="back" layoutX="26.0" layoutY="17.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="74.0" style="-fx-background-color: null;">
+                     <graphic>
+                        <ImageView fx:id="back" fitHeight="52.0" fitWidth="53.0">
+                           <image>
+                              <Image url="@../assets/image/back-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="logout" layoutX="1291.0" layoutY="27.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="15.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="49.0">
+               <image>
+                  <Image url="@../assets/image/logout.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000051" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="user" layoutX="1232.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="52.0">
+               <image>
+                  <Image url="@../assets/image/user.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000058" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

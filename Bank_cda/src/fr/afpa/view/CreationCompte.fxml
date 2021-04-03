@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.ImageInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane>
+         <children>
+            <AnchorPane prefWidth="252.0">
+               <children>
+                  <ImageView fitHeight="577.0" fitWidth="1370.0" opacity="0.9">
+                     <image>
+                        <Image url="@../assets/image/Plan%20de%20travail%201.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane opacity="0.91" prefHeight="200.0" prefWidth="200.0" />
+                  <Pane layoutX="245.0" layoutY="113.0" prefHeight="420.0" prefWidth="409.0" />
+                  <Label graphicTextGap="10.0" layoutX="314.0" layoutY="22.0" text="Creation Compte">
+                     <font>
+                        <Font name="Segoe UI Bold" size="56.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="299.0" layoutY="100.0" prefHeight="473.0" prefWidth="949.0" styleClass="form" stylesheets="@../assets/AppMain.css">
+                     <children>
+                        <Button layoutX="722.0" layoutY="105.0" mnemonicParsing="false" text="Button">
+                           <effect>
+                              <ImageInput />
+                           </effect>
+                        </Button>
+                        <AnchorPane layoutX="128.0" layoutY="105.0" prefHeight="372.0" prefWidth="723.0" style="-fx-background-color: white;" styleClass="champForm">
+                           <children>
+                              <RadioButton fx:id="DecouvertOui" layoutX="406.0" layoutY="73.0" mnemonicParsing="false" text="Oui" />
+                              <RadioButton fx:id="decouvertNon" layoutX="513.0" layoutY="73.0" mnemonicParsing="false" text="Non" />
+                              <Separator layoutX="65.0" layoutY="138.0" prefHeight="15.0" prefWidth="561.0" />
+                              <Label layoutX="96.0" layoutY="73.0" text="Découvert" />
+                              <AnchorPane layoutX="63.0" layoutY="40.0" opacity="0.07" prefHeight="88.0" prefWidth="597.0" style="-fx-background-color: grey;" styleClass="champForm" />
+                              <Label layoutX="106.0" layoutY="213.0" text="Condition génerale de vente" />
+                              <CheckBox fx:id="jaccepte" layoutX="495.0" layoutY="213.0" mnemonicParsing="false" text="J'accepte" />
+                              <AnchorPane layoutX="55.0" layoutY="178.0" opacity="0.07" prefHeight="88.0" prefWidth="597.0" style="-fx-background-color: grey;" styleClass="champForm" />
+                              <Button fx:id="Activer" layoutX="282.0" layoutY="294.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="189.0" styleClass="btnStyle" text="Activer">
+                                 <font>
+                                    <Font name="Segoe UI" size="24.0" />
+                                 </font></Button>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="back" layoutX="7.0" layoutY="14.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="74.0" style="-fx-background-color: null;">
+                           <graphic>
+                              <ImageView fx:id="back" fitHeight="52.0" fitWidth="53.0">
+                                 <image>
+                                    <Image url="@../assets/image/back-button.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="user" layoutX="1232.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="52.0">
+               <image>
+                  <Image url="@../assets/image/user.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000058" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="logout" layoutX="1291.0" layoutY="27.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="15.0" style="-fx-background-color: null;">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="49.0">
+               <image>
+                  <Image url="@../assets/image/logout.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#00000051" />
+               </effect>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
